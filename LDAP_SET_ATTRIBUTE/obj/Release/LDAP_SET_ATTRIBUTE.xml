@@ -6,7 +6,68 @@ LDAP_SET_ATTRIBUTE
 </name>
 </assembly>
 <members>
-<member name="P:LDAP_SET_ATTRIBUTE.My.Resources.Resources.ResourceManager">
+<member name="M:LDAP_SET_ATTRIBUTE.Form1.Form1_Load(System.Object,System.EventArgs)">
+	<summary>
+ Nothing important...
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.BeginCall(System.String)">
+	<summary>
+ The sub that calls the program to set Logon Time for each user
+ </summary>
+	<param name="input">AD Filter String</param>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.CSetHomeDrive(System.String)">
+	<summary>
+ The sub that calls the program to set Home Drive and Home Directory for each user
+ </summary>
+	<param name="input">AD Filter String</param>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.OctectStringToBytes(System.String)">
+	<summary>
+ Convert a Octect String into byte array
+ </summary>
+	<param name="input"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.SetUserDtAttribute(System.DirectoryServices.DirectoryEntry@)">
+	<summary>
+ Set the LogonTime for specified user
+ </summary>
+	<param name="din">the DirectoryEntry for input, which is a record of the Account</param>
+	<returns>The Operation is successful or not</returns>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.SetUserHDrAttribute(System.DirectoryServices.DirectoryEntry@)">
+	<summary>
+ Set the HomeDrive and HomeDirectory for specified user
+ </summary>
+	<param name="din">the DirectoryEntry for input, which is a record of the Account</param>
+	<returns>The Operation is successful or not</returns>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.SetLogonHours(System.DirectoryServices.DirectoryEntry@,System.String)">
+	<summary>
+ Change the LogonHour for specified DirectoryEntry
+ </summary>
+	<param name="ent">The Entry that needs to be changed</param>
+	<param name="TimeValue">The Octect String Value</param>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.SetHomeDriveProperty(System.DirectoryServices.DirectoryEntry@,System.String)">
+	<summary>
+ Change the HomeDrive and HomeDirectory value for a DirectoryEntry
+ </summary>
+	<param name="ent">The Entry that needs to be changed</param>
+	<param name="letter">The HomeDrive letter desiered to set for the Entry</param>
+	<remarks></remarks>
+</member><member name="M:LDAP_SET_ATTRIBUTE.Form1.getDirectoryEntry(System.String)">
+	<summary>
+ Get the list of DirectoryEntries matches Filter
+ </summary>
+	<param name="FilterString">AD Filter String(I set as all users)</param>
+	<returns>List of DirectoryEntry</returns>
+	<remarks>In this program, A DirectoryEntry represents an Account record</remarks>
+</member><member name="P:LDAP_SET_ATTRIBUTE.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
